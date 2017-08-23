@@ -1,5 +1,9 @@
 feature 'adding links' do
 
+  before(:each) do
+   DatabaseCleaner.start
+ end
+
   scenario 'link gets added to list' do
     visit('/links')
     click_button('Add New Link')
@@ -10,5 +14,8 @@ feature 'adding links' do
     within 'ul#links' do
       expect(page).to have_content("http://www.facebook.com")
     end
+  end
+  after(:each) do
+    DatabaseCleaner.clean
   end
 end
