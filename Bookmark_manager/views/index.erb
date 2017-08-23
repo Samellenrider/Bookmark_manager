@@ -1,5 +1,9 @@
 <h1> Your Links mate </h1>
 
+<form action = '/add' method ='post'>
+  <input type = 'submit' name = 'Add New Link'>
+</form>
+
 <ul id = 'links'>
   <% @links.each do |link| %>
    <li>
