@@ -2,7 +2,7 @@ ENV["RACK_ENV"] ||= 'development'
 
 require 'sinatra/base'
 #require './spec/spec_helper'
-require_relative './models/link'
+require_relative '../models/link'
 
 class BookMarkManager < Sinatra::Base
 
